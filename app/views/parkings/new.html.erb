@@ -6,17 +6,24 @@
 <%= form_for @parking do |f| %>
 
    <% if current_user %>
-     <h4> Please choose </h4>
+    <p><%= link_to 'Price List', controller: 'welcome' %>
+    </p>
+    
+     <p>  Please Select
+    
      <label>
        <%= f.radio_button :parking_type, "short-term", :checked => "checked" %> short-term
-     </label>
- 
+     </label> 
      <label>
        <%= f.radio_button :parking_type, "long-term" %> long-term
      </label>
+      </p>
  
    <% else %>
-    <p> As a Guest </p>
+    <p> As a Guest  
+    <%= link_to 'Price List', controller: 'welcome' %>
+    </p>
+    
    <% end %>
 
   <p><%= f.submit "start to count" %></p>
@@ -27,5 +34,5 @@
 
 </div>
 <%= link_to image_tag("parking-sign.jpg", alt: "parking sign" ) %>  
-<%= link_to image_tag("123.jpg", alt: "No parking sign" ) %> 
+
 <%= link_to image_tag("DC.jpg", alt: "DC parking sign", size: "500x350" ) %> 
