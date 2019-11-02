@@ -1,14 +1,14 @@
 
 <div class="center jumbotron text-center">
 <h1>Parking Fee Calculator</h1>
-<h4> Please choose </h4>
+
 
 <%= form_for @parking do |f| %>
 
    <% if current_user %>
- 
+     <h4> Please choose </h4>
      <label>
-       <%= f.radio_button :parking_type, "short-term" %> short-term
+       <%= f.radio_button :parking_type, "short-term", :checked => "checked" %> short-term
      </label>
  
      <label>
@@ -16,7 +16,7 @@
      </label>
  
    <% else %>
-     general
+    <p> As a Guest </p>
    <% end %>
 
   <p><%= f.submit "start to count" %></p>
@@ -26,6 +26,6 @@
 
 
 </div>
-<%= link_to image_tag("parking-sign.jpg", alt: "parking sign" )  %>
-
-<%= link_to image_tag("backedintoparking-1a.jpg", alt: "parking lot", :size => "600x400")  %>
+<%= link_to image_tag("parking-sign.jpg", alt: "parking sign" ) %>  
+<%= link_to image_tag("123.jpg", alt: "No parking sign" ) %> 
+<%= link_to image_tag("DC.jpg", alt: "DC parking sign", size: "500x350" ) %> 

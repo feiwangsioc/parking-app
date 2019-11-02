@@ -10,7 +10,7 @@ class ParkingsController < ApplicationController
       @parking.parking_type = params[:parking][:parking_type]
       @parking.user = current_user
     else 
-      @parking.parking_type = "guset"
+      @parking.parking_type = "guest"
     end 
     @parking.save!
     
